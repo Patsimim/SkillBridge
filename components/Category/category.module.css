@@ -1,0 +1,242 @@
+.helpers {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.helpers__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.helpers__title {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-text);
+}
+
+.helpers__see-more {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 13px;
+  transition: opacity 0.15s;
+}
+
+.helpers__see-more:hover {
+  opacity: 0.75;
+}
+
+/* Helper list */
+.helpers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Helper card */
+.helper-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: #fafbff;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.helper-card:hover {
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow-md);
+}
+
+/* Avatar */
+.helper-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Info */
+.helper-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.helper-card__title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s;
+}
+
+.helper-card:hover .helper-card__title {
+  color: var(--color-blue);
+}
+
+.helper-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.helper-card__name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.helper-card__dot {
+  color: var(--color-border);
+  font-size: 10px;
+}
+
+.helper-card__location {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.helper-card__location--online {
+  color: var(--color-green);
+}
+
+.helper-card__online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-green);
+}
+
+/* Price + CTA */
+.helper-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.helper-card__price {
+  background: var(--color-blue-bg);
+  color: var(--color-blue);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.helper-card__chat-btn {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.helper-card__chat-btn:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+/* Stats strip */
+.helpers__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-hover-bg);
+}
+
+.helpers__stat-value {
+  color: var(--color-blue);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.helpers__stat-label {
+  color: var(--color-text-light);
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* CTA banner */
+.helpers__cta-banner {
+  margin-top: 20px;
+  background: linear-gradient(
+    110deg,
+    var(--color-blue-dark),
+    var(--color-blue-light)
+  );
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.helpers__cta-text strong {
+  display: block;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.helpers__cta-text span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  margin-top: 2px;
+  display: block;
+}
+
+.helpers__cta-signup {
+  background: var(--color-white);
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.helpers__cta-signup:hover {
+  background: #eff6ff;
+}
