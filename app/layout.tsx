@@ -9,9 +9,17 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SkillBridge PH — Pa-Help? Kaya Yan!",
+  title: "SkillBridge PH | Pa-Help? Kaya Yan!",
   description:
     "Hanapin ang tamang tulong para sa'yo. Mag-connect sa mga skilled helpers sa Pilipinas.",
+  metadataBase: new URL("http://localhost:3000"),
+  icons: {
+    icon: "/illustration/logotrial.png",
+    shortcut: "/illustration/logotrial.png",
+  },
+  openGraph: {
+    images: "/illustration/logotrial.png",
+  },
 };
 
 export default function RootLayout({

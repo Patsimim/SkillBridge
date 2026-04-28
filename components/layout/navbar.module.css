@@ -1,16 +1,14 @@
 .navbar {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
   z-index: 50;
   box-shadow: var(--shadow-sm);
 }
 
 .navbar__inner {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(16px, 4vw, 64px);
   height: 64px;
   display: flex;
   align-items: center;

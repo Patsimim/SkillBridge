@@ -14,11 +14,12 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import styles from "./requestform.module.css";
+import Image from "next/image";
 
 /* ─── Category data ─── */
 type Category = {
   label: string;
-  Icon: LucideIcon;
+  Icon: string | LucideIcon;
   color: string;
   bg: string;
 };
@@ -26,37 +27,37 @@ type Category = {
 const CATEGORIES: Category[] = [
   {
     label: "Tech Help",
-    Icon: Monitor,
+    Icon: "/illustration/techHelpF.png",
     color: "var(--cat-tech-color)",
     bg: "var(--cat-tech-bg)",
   },
   {
     label: "School Work",
-    Icon: GraduationCap,
+    Icon: "/illustration/schoolWorkF.png",
     color: "var(--cat-school-color)",
     bg: "var(--cat-school-bg)",
   },
   {
     label: "Business Support",
-    Icon: Briefcase,
+    Icon: "/illustration/businessF.png",
     color: "var(--cat-biz-color)",
     bg: "var(--cat-biz-bg)",
   },
   {
     label: "Creative Design",
-    Icon: Palette,
+    Icon: "/illustration/creativeDesignF.png",
     color: "var(--cat-design-color)",
     bg: "var(--cat-design-bg)",
   },
   {
     label: "Tutoring",
-    Icon: BookOpen,
+    Icon: "/illustration/tutoringF.png",
     color: "var(--cat-tutor-color)",
     bg: "var(--cat-tutor-bg)",
   },
   {
-    label: "Iba Pa",
-    Icon: Lightbulb,
+    label: "Others",
+    Icon: "/illustration/othersf.png",
     color: "var(--cat-other-color)",
     bg: "var(--cat-other-bg)",
   },
@@ -165,8 +166,19 @@ export function CategoriesGrid() {
               className={styles["category-card__icon-wrap"]}
               style={{ background: color + "22" }}
             >
-              <Icon size={20} style={{ color }} />
+              {typeof Icon === "string" ? (
+                <Image
+                  src={Icon}
+                  alt={label}
+                  width={52}
+                  height={52}
+                  style={{ objectFit: "contain", width: 52, height: 52 }}
+                />
+              ) : (
+                <Icon size={52} style={{ color }} />
+              )}
             </div>
+
             <span className={styles["category-card__label"]}>{label}</span>
           </button>
         ))}

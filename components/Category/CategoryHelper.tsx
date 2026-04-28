@@ -107,23 +107,23 @@ export default function HelpersPanel() {
       </div>
 
       {/* Stats */}
-      <div className={styles.helpers__stats}>
+      {/* <div className={styles.helpers__stats}>
         {STATS.map((s) => (
           <div key={s.label}>
             <p className={styles["helpers__stat-value"]}>{s.value}</p>
             <p className={styles["helpers__stat-label"]}>{s.label}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* CTA Banner */}
-      <div className={styles["helpers__cta-banner"]}>
+      {/* <div className={styles["helpers__cta-banner"]}>
         <div className={styles["helpers__cta-text"]}>
           <strong>Maging Helper Ka Rin!</strong>
           <span>Kumita habang nagtutulungan tayo 🤝</span>
         </div>
         <button className={styles["helpers__cta-signup"]}>Mag-Sign Up</button>
-      </div>
+      </div> */}
     </div>
   );
 }

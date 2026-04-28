@@ -2,6 +2,7 @@
 
 import { MessageSquare, FileText, ChevronDown } from "lucide-react";
 import styles from "./navbar.module.css";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -10,7 +11,13 @@ export default function Navbar() {
         {/* Logo */}
         <div className={styles.navbar__logo}>
           <div className={styles["navbar__logo-icon"]}>
-            <span>S</span>
+            <Image
+              src='/illustration/logotrial.png'
+              alt='SkillBridge PH Logo'
+              width={42}
+              height={42}
+              priority
+            />
           </div>
           <div className={styles.navbar__brand}>
             <span className={styles["navbar__brand-skill"]}>SkillBridge</span>

@@ -1,0 +1,156 @@
+/* ── Section ── */
+.section {
+  padding: 64px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.header__eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  background: color-mix(in srgb, var(--color-blue) 10%, transparent);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.header__title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.header__title--accent {
+  color: var(--color-orange);
+}
+
+.header__sub {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* ── Steps row ── */
+.steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/* ── Wrapper (card + arrow) ── */
+.step__wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .step__wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+/* ── Card ── */
+.card {
+  flex: 1;
+  min-width: 0;
+  border-radius: 20px;
+  padding: 20px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  /* equal height across all cards */
+  height: 100%;
+  box-sizing: border-box;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Step number badge top-left */
+.card__badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.card__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card__desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.card__illustration {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 8px;
+  min-height: 70px;
+}
+
+/* ── Arrow between cards ── */
+.arrow {
+  font-size: 22px;
+  font-weight: 300;
+  padding: 0 8px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  /* vertically align to top-half of card (near the title) */
+  align-self: center;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    transform: rotate(90deg);
+    margin-bottom: 0;
+  }
+}
