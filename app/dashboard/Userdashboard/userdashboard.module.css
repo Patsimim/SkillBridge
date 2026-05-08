@@ -1,0 +1,771 @@
+/* ============================================================
+   UserDashboard Layout
+   ============================================================ */
+
+.page {
+  background: #f1f5f9;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", "Outfit", sans-serif;
+}
+
+.body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ---- Main Column ---- */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+/* ============================================================
+   Section Headers
+   ============================================================ */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.seeAll {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.seeAll:hover {
+  opacity: 0.75;
+}
+
+/* ============================================================
+   For You — Horizontal scroll cards
+   ============================================================ */
+
+.forYouScroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.forYouScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.serviceCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 14px 16px;
+  min-width: 190px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.cardTag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.tagPopular {
+  background: #fef3c7;
+  color: #d97706;
+}
+.tagNearYou {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.tagRecommended {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.tagTrending {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.cardAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.cardAvatarPlaceholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #cbd5e1, #94a3b8);
+  margin-bottom: 8px;
+}
+
+.cardName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.star {
+  color: #f59e0b;
+  font-size: 12px;
+}
+.ratingVal {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.cardPrice {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ============================================================
+   Stats Row
+   ============================================================ */
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.statCard:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.statIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.iconBlue {
+  background: #dbeafe;
+}
+.iconOrange {
+  background: #ffedd5;
+}
+.iconGreen {
+  background: #dcfce7;
+}
+
+.statNum {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1px;
+}
+
+.statSub {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+.statArrow {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+/* ============================================================
+   Live in the Marketplace
+   ============================================================ */
+
+.marketplaceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.taskCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.taskCard:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.taskHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.taskIconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.taskTitleRow {
+  flex: 1;
+}
+
+.taskName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.badgeOpen {
+  font-size: 10px;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #16a34a;
+  border-radius: 20px;
+  padding: 2px 8px;
+}
+
+.taskDesc {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.taskPrice {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.taskMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.taskMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   Featured Helpers
+   ============================================================ */
+
+.helpersScroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.helpersScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.helperCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 16px;
+  min-width: 160px;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+
+.helperCard:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.helperAvatarWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.helperAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.helperAvatarPlaceholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bfdbfe, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+.helperVerified {
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  border: 2px solid white;
+}
+
+.helperName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.helperRating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.helperSkill {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.helperPrice {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* ============================================================
+   SIDEBAR — Upcoming Schedule
+   ============================================================ */
+
+.sideCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scheduleItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.scheduleDate {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.scheduleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.scheduleTime {
+  font-size: 11px;
+  font-weight: 700;
+  color: #374151;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+.scheduleDetails {
+  flex: 1;
+}
+
+.scheduleName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.scheduleWith {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.badgeConfirmed {
+  font-size: 10px;
+  font-weight: 700;
+  background: #dcfce7;
+  color: #16a34a;
+  border-radius: 20px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.badgePending {
+  font-size: 10px;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #d97706;
+  border-radius: 20px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.scheduleDivider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 4px 0;
+}
+
+/* ============================================================
+   SIDEBAR — Recent Conversations
+   ============================================================ */
+
+.convList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.convItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.convItem:hover {
+  background: #f8fafc;
+}
+
+.convAvatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.convAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bfdbfe, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.convUnread {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #2563eb;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid white;
+}
+
+.convBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.convName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.convMsg {
+  font-size: 11px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.convTime {
+  font-size: 10px;
+  color: #94a3b8;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   SIDEBAR — Become a Helper CTA
+   ============================================================ */
+
+.ctaCard {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.ctaTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.ctaSub {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.ctaCheck {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.checkIcon {
+  color: #16a34a;
+  font-size: 11px;
+}
+
+.ctaBtn {
+  width: 100%;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.18s;
+}
+
+.ctaBtn:hover {
+  background: #ea580c;
+}
+
+/* ============================================================
+   SIDEBAR — Helper Earnings
+   ============================================================ */
+
+.earningsCard {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.earningsLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.earningsIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.earningsLabel {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.earningsAmount {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.earningsLink {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.earningsLink:hover {
+  opacity: 0.75;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+  .statsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .body {
+    padding: 16px 16px 40px;
+    gap: 20px;
+  }
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+  .marketplaceGrid {
+    grid-template-columns: 1fr;
+  }
+}
