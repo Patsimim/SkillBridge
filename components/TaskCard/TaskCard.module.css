@@ -1,0 +1,221 @@
+/* ─── Card Base ──────────────────────────────────────────────────────────────── */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.card:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  background: #f9fafb;
+}
+
+/* List mode */
+.cardList {
+  flex-direction: row;
+}
+
+/* Grid mode */
+.cardGrid {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.cardGrid:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Icon ───────────────────────────────────────────────────────────────────── */
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* ─── Info block ─────────────────────────────────────────────────────────────── */
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.statusBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.statusOpen {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.statusClosed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.statusInProgress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.description {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #f3f4f6;
+  border-radius: 99px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* ─── Meta (price + delivery) ────────────────────────────────────────────────── */
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.cardGrid .meta {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.metaGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.metaLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.priceUnit {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6b7280;
+  margin-left: 2px;
+}
+
+.deliveryValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ─── Provider ───────────────────────────────────────────────────────────────── */
+.provider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.providerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.providerName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.star {
+  color: #f59e0b;
+  font-size: 13px;
+}
+
+.ratingValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.ratingCount {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ─── Chevron ────────────────────────────────────────────────────────────────── */
+.chevron {
+  font-size: 22px;
+  color: #d1d5db;
+  flex-shrink: 0;
+  line-height: 1;
+}

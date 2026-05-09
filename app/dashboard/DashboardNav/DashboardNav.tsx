@@ -1,13 +1,18 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import styles from "./dashboardnav.module.css";
-import { MessageSquare, FileText, ChevronDown } from "lucide-react";
+import { Bell, ChevronDown } from "lucide-react";
+
+const navLinks = [
+  { label: "Browse Tasks", path: "/browse-task" },
+  { label: "My Requests", path: "/my-requests" },
+  { label: "Messages", path: "/messages" },
+];
 
 export default function DashboardNav() {
-  const [active, setActive] = useState("Browse Tasks");
-  const navLinks = ["Browse Tasks", "My Requests", "Messages"];
+  const pathname = usePathname();
 
   return (
     <header className={styles.navbar}>
@@ -18,41 +23,46 @@ export default function DashboardNav() {
             <Image
               src='/illustration/logotrial.png'
               alt='SkillBridge PH Logo'
-              width={42}
-              height={42}
+              width={28}
+              height={28}
               priority
             />
           </div>
-          <div className={styles.navbar__brand}>
+          <span className={styles.navbar__brand}>
             <span className={styles["navbar__brand-skill"]}>SkillBridge</span>
             <span className={styles["navbar__brand-ph"]}>PH</span>
-          </div>
-          <span className={styles.navbar__tagline}>Pa-Help, Kaya Yan!</span>
+          </span>
         </div>
 
         {/* Nav Links */}
         <nav className={styles.navbar__nav}>
           {navLinks.map((link) => (
-            <button
-              key={link}
+            <Link
+              key={link.label}
+              href={link.path}
               className={`${styles["navbar__nav-btn"]} ${
-                active === link ? styles["navbar__nav-btn--active"] : ""
+                pathname === link.path ? styles["navbar__nav-btn--active"] : ""
               }`}
-              onClick={() => setActive(link)}
             >
-              {link}
-              {link === "Messages" && <span className={styles.badge}>3</span>}
-            </button>
+              {link.label}
+              {link.label === "Messages" && (
+                <span className={styles.badge}>3</span>
+              )}
+            </Link>
           ))}
         </nav>
 
-        {/* User */}
+        {/* Right */}
         <div className={styles.navbar__user}>
-          <button className={styles["navbar__user-btn"]}>
-            Russel
+          <button className={styles.notifBtn}>
+            <Bell size={18} strokeWidth={1.8} />
+            <span className={styles.notifLabel}>Notifications</span>
+          </button>
+          <button className={styles.userBtn}>
+            <div className={styles.navbar__avatar}>R</div>
+            <span className={styles.userName}>Russel</span>
             <ChevronDown size={14} />
           </button>
-          <div className={styles.navbar__avatar}>R</div>
         </div>
       </div>
     </header>

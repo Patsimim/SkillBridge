@@ -29,7 +29,7 @@
 .left {
   flex: 1;
   min-width: 0;
-  max-width: 500px;
+  max-width: 680px;
 }
 
 .greeting {
@@ -51,6 +51,7 @@
   margin-bottom: 18px;
 }
 
+/* ── Search ── */
 .searchRow {
   display: flex;
   gap: 10px;
@@ -75,7 +76,7 @@
 }
 
 .searchIcon {
-  font-size: 15px;
+  color: #9ca3af;
   flex-shrink: 0;
 }
 
@@ -116,10 +117,11 @@
   transform: translateY(-1px);
 }
 
+/* ── Action Buttons ── */
 .actions {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .actionBtn {
@@ -131,6 +133,7 @@
   padding: 10px 14px;
   cursor: pointer;
   text-align: left;
+  font-family: "Plus Jakarta Sans", sans-serif;
   transition:
     transform 0.15s,
     box-shadow 0.15s;
@@ -150,6 +153,10 @@
   background: #1d4ed8;
 }
 
+.actionPrimary .actionSub {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .actionSecondary {
   background: white;
   color: #374151;
@@ -163,7 +170,8 @@
 }
 
 .actionIcon {
-  font-size: 18px;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
@@ -179,6 +187,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 
 .actionBadge {
@@ -192,12 +201,13 @@
 
 .actionSub {
   font-size: 11px;
-  opacity: 0.7;
+  color: #94a3b8;
+  white-space: nowrap;
 }
 
-/* Illustration */
+/* ── Illustration ── */
 .right {
-  width: 280px;
+  width: 350px;
   flex-shrink: 0;
 }
 

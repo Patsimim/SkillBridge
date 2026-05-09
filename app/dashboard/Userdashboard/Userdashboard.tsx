@@ -10,14 +10,17 @@ import RecentConversations from "../Sidebar/RecentConversation/RecentConversatio
 import BecomeHelperCTA from "../Sidebar/BecomeHelperCTA/BecomeHelperCTA";
 import HelperEarnings from "../Sidebar/Earnings/Earnings";
 import styles from "./userdashboard.module.css";
+import Footer from "@/components/Footer/Footer";
 
 export default function UserDashboard() {
   return (
     <div className={styles.page}>
       <DashboardNav />
+      <div className={styles.heroWrapper}>
+        <DashboardHero />
+      </div>
       <div className={styles.body}>
         <main className={styles.main}>
-          <DashboardHero />
           <StatsRow />
           <ForYouSection />
           <MarketplaceSection />
@@ -30,6 +33,7 @@ export default function UserDashboard() {
           <HelperEarnings />
         </aside>
       </div>
+      <Footer />
     </div>
   );
 }

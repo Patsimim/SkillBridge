@@ -1,4 +1,4 @@
-import GuestLanding from "@/app/GuestLanding/GuestLanding";
+import GuestLanding from "@/app/guestlandingpage/GuestLanding/GuestLanding";
 import UserDashboard from "@/app/dashboard/Userdashboard/Userdashboard";
 
 export default function HomePage() {

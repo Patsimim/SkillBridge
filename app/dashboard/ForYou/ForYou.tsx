@@ -1,4 +1,9 @@
 "use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import styles from "./foryou.module.css";
 
 const CARDS = [
@@ -56,32 +61,52 @@ const CARDS = [
 
 export default function ForYouSection() {
   return (
-    <section>
+    <section className={styles.section}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>For You</h2>
         <button className={styles.seeAll}>See all →</button>
       </div>
-      <div className={styles.scroll}>
+
+      <Swiper
+        effect='coverflow'
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView='auto'
+        initialSlide={2}
+        spaceBetween={150}
+        coverflowEffect={{
+          rotate: 30,
+          stretch: 0,
+          depth: 120,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        pagination={{ clickable: true }}
+        modules={[EffectCoverflow, Pagination]}
+        className={styles.swiper}
+      >
         {CARDS.map((c) => (
-          <div key={c.name} className={styles.card}>
-            <span
-              className={`${styles.cardTag} ${styles[c.tagCls as keyof typeof styles]}`}
-            >
-              {c.tag}
-            </span>
-            <div className={styles.avatar}>{c.initials}</div>
-            <div className={styles.cardName}>{c.name}</div>
-            <div className={styles.cardRating}>
-              <span className={styles.star}>★</span>
-              <span className={styles.ratingVal}>{c.rating}</span>
-              <span>({c.reviews})</span>
+          <SwiperSlide key={c.name} className={styles.swiperSlide}>
+            <div className={styles.card}>
+              <span
+                className={`${styles.cardTag} ${styles[c.tagCls as keyof typeof styles]}`}
+              >
+                {c.tag}
+              </span>
+              <div className={styles.avatar}>{c.initials}</div>
+              <div className={styles.cardName}>{c.name}</div>
+              <div className={styles.cardRating}>
+                <span className={styles.star}>★</span>
+                <span className={styles.ratingVal}>{c.rating}</span>
+                <span>({c.reviews})</span>
+              </div>
+              <div className={styles.cardPrice}>
+                {c.skill} · {c.price}
+              </div>
             </div>
-            <div className={styles.cardPrice}>
-              {c.skill} · {c.price}
-            </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }
