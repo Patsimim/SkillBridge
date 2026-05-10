@@ -71,7 +71,9 @@ export default function NotificationDropdown({ onClose }: Props) {
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [onClose]);
 
   const unreadCount = MOCK_NOTIFICATIONS.filter((n) => !n.read).length;
