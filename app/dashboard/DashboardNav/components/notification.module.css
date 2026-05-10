@@ -1,0 +1,230 @@
+/* ─── Dropdown Panel ─────────────────────────────────────── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 200;
+  width: 360px;
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.06),
+    0 12px 32px -4px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  /* Slide-down entrance */
+  animation: slideDown 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid #f0f3f7;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: 650;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 99px;
+  background: #3b5bdb;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.markAllBtn {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #3b5bdb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.markAllBtn:hover {
+  color: #2f4ac0;
+  text-decoration: underline;
+}
+
+/* ─── List ───────────────────────────────────────────────── */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 4px;
+}
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #dde3ed;
+  border-radius: 99px;
+}
+
+/* ─── Item ───────────────────────────────────────────────── */
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: background 0.12s;
+  position: relative;
+}
+
+.item:hover {
+  background: #f7f9fc;
+}
+
+.itemUnread {
+  background: #f4f7ff;
+}
+
+.itemUnread:hover {
+  background: #edf0fb;
+}
+
+/* ─── Icon ───────────────────────────────────────────────── */
+.iconWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  margin-top: 1px;
+}
+
+.iconWrap--request {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.iconWrap--confirmed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.iconWrap--message {
+  background: #fff3e0;
+  color: #ea6c00;
+}
+
+.iconWrap--reminder {
+  background: #dbeafe;
+  color: #1d6ae5;
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notifTitle {
+  font-size: 0.8rem;
+  font-weight: 640;
+  color: #0f172a;
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.notifDesc {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin: 0 0 4px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ─── Unread Dot ─────────────────────────────────────────── */
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b5bdb;
+  margin-top: 6px;
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+.footer {
+  padding: 12px 18px;
+  border-top: 1px solid #f0f3f7;
+  text-align: center;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 550;
+  color: #3b5bdb;
+  text-decoration: none;
+  transition:
+    gap 0.2s,
+    color 0.15s;
+}
+
+.viewAll:hover {
+  color: #2f4ac0;
+  gap: 8px;
+}
+
+.arrow {
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.viewAll:hover .arrow {
+  transform: translateX(2px);
+}

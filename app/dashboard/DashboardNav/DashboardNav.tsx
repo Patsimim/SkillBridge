@@ -1,9 +1,13 @@
 "use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import styles from "./dashboardnav.module.css";
 import { Bell, ChevronDown } from "lucide-react";
+import NotificationDropdown from "./components/notification";
+import ProfileDropdown from "./components/profile";
 
 const navLinks = [
   { label: "Browse Tasks", path: "/browse-task" },
@@ -13,6 +17,8 @@ const navLinks = [
 
 export default function DashboardNav() {
   const pathname = usePathname();
+  const [notifOpen, setNotifOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
 
   return (
     <header className={styles.navbar}>
@@ -54,15 +60,34 @@ export default function DashboardNav() {
 
         {/* Right */}
         <div className={styles.navbar__user}>
-          <button className={styles.notifBtn}>
-            <Bell size={18} strokeWidth={1.8} />
-            <span className={styles.notifLabel}>Notifications</span>
-          </button>
-          <button className={styles.userBtn}>
-            <div className={styles.navbar__avatar}>R</div>
-            <span className={styles.userName}>Russel</span>
-            <ChevronDown size={14} />
-          </button>
+          <div className={styles.notifWrapper}>
+            <button
+              className={styles.notifBtn}
+              onClick={() => setNotifOpen((prev) => !prev)}
+            >
+              <Bell size={18} strokeWidth={1.8} />
+              <span className={styles.notifLabel}>Notifications</span>
+            </button>
+
+            {notifOpen && (
+              <NotificationDropdown onClose={() => setNotifOpen(false)} />
+            )}
+          </div>
+
+          <div className={styles.profileWrapper}>
+            <button
+              className={styles.userBtn}
+              onClick={() => setProfileOpen((prev) => !prev)}
+            >
+              <div className={styles.navbar__avatar}>R</div>
+              <span className={styles.userName}>Russel</span>
+              <ChevronDown size={14} />
+            </button>
+
+            {profileOpen && (
+              <ProfileDropdown onClose={() => setProfileOpen(false)} />
+            )}
+          </div>
         </div>
       </div>
     </header>
