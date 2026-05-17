@@ -1,4 +1,4 @@
-/* ─── Dropdown Panel ─────────────────────────────────────── */
+/* Dropdown Panel */
 .dropdown {
   position: absolute;
   top: calc(100% + 10px);
@@ -27,7 +27,7 @@
   }
 }
 
-/* ─── Profile Section ────────────────────────────────────── */
+/* Profile Section */
 .profile {
   display: flex;
   align-items: center;
@@ -95,14 +95,14 @@
   width: fit-content;
 }
 
-/* ─── Divider ────────────────────────────────────────────── */
+/* Divider */
 .divider {
   height: 1px;
   background: #f0f3f7;
   margin: 0;
 }
 
-/* ─── Menu ───────────────────────────────────────────────── */
+/* Menu */
 .menu {
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@
   color: #3b5bdb;
 }
 
-/* ─── Footer / Log Out ───────────────────────────────────── */
+/* Footer / Log Out */
 .footer {
   padding: 6px 0;
 }

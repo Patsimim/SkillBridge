@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { Calendar, Star } from "lucide-react";
-import StatusBadge, { RequestStatus } from "../StatusBadge/StatusBadge";
+import StatusBadge, {
+  RequestStatus,
+} from "../../../../../components/StatusBadge/StatusBadge";
 import styles from "./requestcard.module.css";
 
 export interface RequestCardData {

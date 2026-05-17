@@ -1,11 +1,11 @@
-/* ── Section ── */
+/* Section */
 .section {
   padding: 64px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ── Wrapper ── */
+/* Wrapper */
 .wrapper {
   display: flex;
   align-items: stretch;
@@ -21,7 +21,7 @@
   }
 }
 
-/* ── Cards ── */
+/* Cards */
 .card {
   flex: 1;
   padding: 48px 40px;
@@ -142,7 +142,7 @@
   color: var(--color-orange);
 }
 
-/* ── Divider ── */
+/* Divider */
 .divider {
   width: 2px;
   background: rgba(255, 255, 255, 0.25);

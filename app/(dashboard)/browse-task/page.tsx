@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import styles from "./browsetask.module.css";
-import TaskCard, { Task } from "@/components/TaskCard/TaskCard";
+import TaskCard, {
+  Task,
+} from "@/app/(dashboard)/browse-task/components/TaskCard/TaskCard";
 import FilterSidebar, {
   FilterState,
-} from "@/components/FilterSideBar/FilterSideBar";
+} from "@/app/(dashboard)/browse-task/components/FilterSideBar/FilterSideBar";
 
 // ─── Mock Data ────────────────────────────────────────────────────────────────
 const MOCK_TASKS: Task[] = [

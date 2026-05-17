@@ -1,4 +1,4 @@
-/* ─── Sidebar shell ──────────────────────────────────────────────────────────── */
+/* Sidebar shell */
 .sidebar {
   width: 240px;
   flex-shrink: 0;
@@ -38,7 +38,7 @@
   text-decoration: underline;
 }
 
-/* ─── Section ────────────────────────────────────────────────────────────────── */
+/* Section */
 .section {
   border-top: 1px solid #f3f4f6;
   padding: 12px 0;
@@ -71,7 +71,7 @@
   margin-top: 12px;
 }
 
-/* ─── Checkbox group ─────────────────────────────────────────────────────────── */
+/* Checkbox group */
 .checkboxGroup {
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@
   flex-shrink: 0;
 }
 
-/* ─── Range slider ───────────────────────────────────────────────────────────── */
+/* Range slider */
 .rangeWrapper {
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@
   color: #9ca3af;
 }
 
-/* ─── Actions ────────────────────────────────────────────────────────────────── */
+/* Actions */
 .actions {
   display: flex;
   flex-direction: column;

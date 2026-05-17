@@ -1,4 +1,4 @@
-/* ─── Card Base ──────────────────────────────────────────────────────────────── */
+/* Card Base */
 .card {
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ─── Icon ───────────────────────────────────────────────────────────────────── */
+/* Icon */
 .icon {
   width: 52px;
   height: 52px;
@@ -48,7 +48,7 @@
   flex-shrink: 0;
 }
 
-/* ─── Info block ─────────────────────────────────────────────────────────────── */
+/* Info block */
 .info {
   flex: 1;
   min-width: 0;
@@ -115,7 +115,7 @@
   font-weight: 500;
 }
 
-/* ─── Meta (price + delivery) ────────────────────────────────────────────────── */
+/* Meta (price + delivery) */
 .meta {
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@
   color: #374151;
 }
 
-/* ─── Provider ───────────────────────────────────────────────────────────────── */
+/* Provider */
 .provider {
   display: flex;
   align-items: center;
@@ -212,7 +212,7 @@
   color: #9ca3af;
 }
 
-/* ─── Chevron ────────────────────────────────────────────────────────────────── */
+/* Chevron */
 .chevron {
   font-size: 22px;
   color: #d1d5db;

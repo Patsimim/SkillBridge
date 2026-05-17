@@ -3,9 +3,9 @@ import { useState, useMemo } from "react";
 import { Search, SlidersHorizontal, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-import TabBar from "@/components/TabBar/TabBar";
-import RequestCard from "@/components/RequestCard/RequestCard";
-import RequestSidebar from "@/components/RequestSibeBar/RequestSideBar";
+import TabBar from "@/app/(dashboard)/my-requests/components/TabBar/TabBar";
+import RequestCard from "@/app/(dashboard)/my-requests/components/RequestCard/RequestCard";
+import RequestSidebar from "@/app/(dashboard)/my-requests/components/RequestSibeBar/RequestSideBar";
 import { ALL_REQUESTS, TABS, SUMMARY } from "./myrequestdata";
 import styles from "./myrequest.module.css";
 

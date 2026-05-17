@@ -1,5 +1,5 @@
-import { RequestCardData } from "@/components/RequestCard/RequestCard";
-import { Tab } from "@/components/TabBar/TabBar";
+import { RequestCardData } from "@/app/(dashboard)/my-requests/components/RequestCard/RequestCard";
+import { Tab } from "@/app/(dashboard)/my-requests/components/TabBar/TabBar";
 
 export const ALL_REQUESTS: RequestCardData[] = [
   {

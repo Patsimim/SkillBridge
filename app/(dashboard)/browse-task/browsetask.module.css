@@ -1,4 +1,4 @@
-/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+/* Design Tokens */
 :root {
   --primary: #2563eb;
   --primary-light: #eff6ff;
@@ -16,7 +16,7 @@
   --shadow-navbar: 0 1px 0 var(--border);
 }
 
-/* ─── Page ───────────────────────────────────────────────────────────────────── */
+/* Page */
 .page {
   min-height: 100vh;
   background: var(--bg);
@@ -24,14 +24,14 @@
   color: var(--text-primary);
 }
 
-/* ─── Shell ──────────────────────────────────────────────────────────────────── */
+/* Shell */
 .shell {
   max-width: 1280px;
   margin: 0 auto;
   padding: 32px 32px 64px;
 }
 
-/* ─── Page Header ────────────────────────────────────────────────────────────── */
+/* Page Header */
 .pageHeader {
   margin-bottom: 24px;
 }
@@ -48,7 +48,7 @@
   margin: 0;
 }
 
-/* ─── Search Row ─────────────────────────────────────────────────────────────── */
+/* Search Row */
 .searchRow {
   display: flex;
   align-items: center;
@@ -121,14 +121,14 @@
   color: var(--text-secondary);
 }
 
-/* ─── Body ───────────────────────────────────────────────────────────────────── */
+/* Body */
 .body {
   display: flex;
   align-items: flex-start;
   gap: 24px;
 }
 
-/* ─── Listing ────────────────────────────────────────────────────────────────── */
+/* Listing */
 .listing {
   flex: 1;
   min-width: 0;
@@ -172,7 +172,7 @@
   color: var(--primary);
 }
 
-/* ─── Card layouts ───────────────────────────────────────────────────────────── */
+/* Card layouts */
 .listCards {
   display: flex;
   flex-direction: column;
@@ -189,7 +189,7 @@
   gap: 16px;
 }
 
-/* ─── Pagination ─────────────────────────────────────────────────────────────── */
+/* Pagination */
 .pagination {
   display: flex;
   align-items: center;

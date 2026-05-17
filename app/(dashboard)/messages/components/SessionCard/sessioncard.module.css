@@ -1,0 +1,80 @@
+.sessionCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sessionCard__icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  background: var(--brand-blue-light);
+  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sessionCard__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sessionCard__title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sessionCard__datetime {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.sessionCard__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.sessionCard__viewBtn {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  color: var(--brand-blue);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Status badges */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.status--confirmed {
+  background: var(--status-confirmed-bg);
+  color: var(--status-confirmed-text);
+}
+.status--pending {
+  background: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+.status--completed {
+  background: var(--border);
+  color: var(--text-secondary);
+}
