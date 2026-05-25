@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-  margin-top: clamp(16px, 3vw, 32px);
+  /* margin-top: clamp(16px, 3vw, 32px); */
   border-top: 1px solid var(--color-border);
   background: var(--color-white);
   padding: clamp(16px, 2vw, 24px);

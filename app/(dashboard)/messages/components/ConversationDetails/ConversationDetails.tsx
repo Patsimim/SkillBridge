@@ -1,5 +1,3 @@
-// components/messages/ConversationDetails.tsx
-
 import type {
   Conversation,
   Request,
@@ -57,12 +55,14 @@ export default function ConversationDetails({
           )}
           {user.memberSince && (
             <span className={styles.helperCard__meta}>
-              🕐 Member since {user.memberSince}
+              <span className={styles.helperCard__metaIcon}>🕐</span>
+              Member since {user.memberSince}
             </span>
           )}
           {user.responseTime && (
             <span className={styles.helperCard__meta}>
-              🕐 Typically replies within {user.responseTime}
+              <span className={styles.helperCard__metaIcon}>🕐</span>
+              Typically replies within {user.responseTime}
             </span>
           )}
         </div>
@@ -76,7 +76,8 @@ export default function ConversationDetails({
           <span className={styles.requestCard__title}>{request.title}</span>
           <div className={styles.requestCard__row}>
             <span className={styles.requestCard__datetime}>
-              📅 {request.date} • {request.time}
+              <span className={styles.requestCard__datetimeIcon}>📅</span>
+              {request.date} • {request.time}
             </span>
             <span className={`${styles.statusBadge} ${statusClass}`}>
               {request.status}
@@ -93,7 +94,10 @@ export default function ConversationDetails({
         <span className={styles.sectionLabel}>Shared Files</span>
         {files.map((file) => (
           <div key={file.id} className={styles.fileItem}>
-            <span className={styles.fileItem__icon}>📄</span>
+            {/* Styled PDF icon */}
+            <div className={styles.fileItem__icon} aria-hidden='true'>
+              📄
+            </div>
             <div className={styles.fileItem__info}>
               <span className={styles.fileItem__name}>{file.name}</span>
               <span className={styles.fileItem__meta}>

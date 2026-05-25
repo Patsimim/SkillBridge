@@ -9,7 +9,7 @@ import FilterSidebar, {
   FilterState,
 } from "@/app/(dashboard)/browse-task/components/FilterSideBar/FilterSideBar";
 
-// ─── Mock Data ────────────────────────────────────────────────────────────────
+//  Mock Data
 const MOCK_TASKS: Task[] = [
   {
     id: "1",
@@ -125,7 +125,7 @@ const DEFAULT_FILTERS: FilterState = {
   taskLevel: ["Intermediate"],
 };
 
-// ─── BrowseTask Page ──────────────────────────────────────────────────────────
+//  BrowseTask Page
 export default function BrowseTask() {
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [searchQuery, setSearchQuery] = useState("");
@@ -181,7 +181,7 @@ export default function BrowseTask() {
           </div>
         </div>
 
-        {/* ── Body: Sidebar + Listing ── */}
+        {/* Body: Sidebar + Listing  */}
         <div className={styles.body}>
           <FilterSidebar filters={filters} onChange={setFilters} />
 
@@ -219,39 +219,36 @@ export default function BrowseTask() {
                 <TaskCard key={task.id} task={task} viewMode={viewMode} />
               ))}
             </div>
-
-            {/* Pagination */}
-            <div className={styles.pagination}>
-              <button
-                className={styles.pageBtn}
-                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-              >
-                ‹
-              </button>
-              {[1, 2, 3].map((p) => (
-                <button
-                  key={p}
-                  className={`${styles.pageBtn} ${currentPage === p ? styles.pageBtnActive : ""}`}
-                  onClick={() => setCurrentPage(p)}
-                >
-                  {p}
-                </button>
-              ))}
-              <span className={styles.pageEllipsis}>…</span>
-              <button
-                className={`${styles.pageBtn}`}
-                onClick={() => setCurrentPage(12)}
-              >
-                12
-              </button>
-              <button
-                className={styles.pageBtn}
-                onClick={() => setCurrentPage((p) => Math.min(12, p + 1))}
-              >
-                ›
-              </button>
-            </div>
           </main>
+        </div>
+
+        {/*  Pagination  */}
+        <div className={styles.pagination}>
+          <button
+            className={styles.pageBtn}
+            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+          >
+            ‹
+          </button>
+          {[1, 2, 3].map((p) => (
+            <button
+              key={p}
+              className={`${styles.pageBtn} ${currentPage === p ? styles.pageBtnActive : ""}`}
+              onClick={() => setCurrentPage(p)}
+            >
+              {p}
+            </button>
+          ))}
+          <span className={styles.pageEllipsis}>…</span>
+          <button className={styles.pageBtn} onClick={() => setCurrentPage(12)}>
+            12
+          </button>
+          <button
+            className={styles.pageBtn}
+            onClick={() => setCurrentPage((p) => Math.min(12, p + 1))}
+          >
+            ›
+          </button>
         </div>
       </div>
     </div>

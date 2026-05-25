@@ -1,6 +1,7 @@
 .detailsPanel {
   background: var(--bg-card);
-  border-left: 1px solid var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -21,6 +22,7 @@
   justify-content: space-between;
   padding: 18px 20px 14px;
   border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .detailsPanel__title {
@@ -43,8 +45,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 6px;
-  padding: 20px;
+  gap: 10px;
+  padding: 24px 20px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -52,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
 }
 
 .helperCard__nameRow {
@@ -93,7 +95,16 @@
 .helperCard__meta {
   font-size: 12px;
   color: var(--text-secondary);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.helperCard__metaIcon {
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-shrink: 0;
 }
 
 .helperCard__profileBtn {
@@ -136,7 +147,7 @@
 .requestCard {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   background: var(--bg-page);
   border-radius: var(--radius-md);
   padding: 12px 14px;
@@ -158,6 +169,15 @@
 .requestCard__datetime {
   font-size: 12px;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.requestCard__datetimeIcon {
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-shrink: 0;
 }
 
 .requestCard__detailsBtn {
@@ -170,6 +190,13 @@
   padding: 0;
   font-family: var(--font);
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.requestCard__detailsBtn:hover {
+  text-decoration: underline;
 }
 
 /* ── Status badges ── */
@@ -209,9 +236,18 @@
   border: 1px solid var(--border);
 }
 
+/* Styled PDF icon replacing emoji */
 .fileItem__icon {
-  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  background: #fee2e2;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  color: #dc2626;
+  font-size: 16px;
 }
 
 .fileItem__info {
@@ -245,6 +281,9 @@
   padding: 4px;
   border-radius: var(--radius-sm);
   transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fileItem__download:hover {

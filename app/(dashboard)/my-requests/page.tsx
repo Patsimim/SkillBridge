@@ -1,11 +1,11 @@
 "use client";
 import { useState, useMemo } from "react";
 import { Search, SlidersHorizontal, ArrowRight } from "lucide-react";
-import Image from "next/image";
 
 import TabBar from "@/app/(dashboard)/my-requests/components/TabBar/TabBar";
 import RequestCard from "@/app/(dashboard)/my-requests/components/RequestCard/RequestCard";
 import RequestSidebar from "@/app/(dashboard)/my-requests/components/RequestSibeBar/RequestSideBar";
+import PageHero from "@/components/Hero/PageHero";
 import { ALL_REQUESTS, TABS, SUMMARY } from "./myrequestdata";
 import styles from "./myrequest.module.css";
 
@@ -48,25 +48,12 @@ export default function MyRequestsPage() {
   return (
     <main className={styles.page}>
       <div className={styles.page__wrapper}>
-        {/* ── Hero — full width, above the two-column layout ── */}
-        <div className={styles.hero}>
-          <div className={styles.hero__text}>
-            <h1 className={styles.hero__title}>My Requests</h1>
-            <p className={styles.hero__sub}>
-              Track and manage all your tutoring requests in one place.
-            </p>
-          </div>
-          <div className={styles.hero__illustration} aria-hidden='true'>
-            <Image
-              src='/dashboard_Illustration/dashboard_illustration.png'
-              alt='Dashboard Illustration'
-              width={220}
-              height={160}
-              priority
-              className={styles.illustration}
-            />
-          </div>
-        </div>
+        {/* ── Hero ── */}
+        <PageHero
+          title='My Requests'
+          subtitle='Track and manage all your tutoring requests in one place.'
+          illustrationSrc='/dashboard_Illustration/dashboard_illustration.png'
+        />
 
         {/* ── Two-column layout ── */}
         <div className={styles.page__inner}>

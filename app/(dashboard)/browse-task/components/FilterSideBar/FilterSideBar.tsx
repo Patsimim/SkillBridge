@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./filtersidebar.module.css";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+//  Types
 export interface FilterState {
   categories: string[];
   priceMin: number;
@@ -32,7 +32,7 @@ const DELIVERY_OPTIONS = [
 ];
 const LEVEL_OPTIONS = ["Beginner", "Intermediate", "Expert"];
 
-// ─── CheckboxGroup ────────────────────────────────────────────────────────────
+//  CheckboxGroup
 function CheckboxGroup({
   options,
   selected,
@@ -67,7 +67,7 @@ function CheckboxGroup({
   );
 }
 
-// ─── RangeSlider ──────────────────────────────────────────────────────────────
+//  RangeSlider
 function RangeSlider({
   min,
   max,
@@ -118,7 +118,7 @@ function RangeSlider({
   );
 }
 
-// ─── FilterSection ────────────────────────────────────────────────────────────
+//  FilterSection
 function FilterSection({
   title,
   children,
@@ -141,7 +141,7 @@ function FilterSection({
   );
 }
 
-// ─── FilterSidebar ────────────────────────────────────────────────────────────
+//  FilterSidebar
 export default function FilterSidebar({ filters, onChange }: Props) {
   function reset() {
     onChange({

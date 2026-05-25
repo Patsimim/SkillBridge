@@ -24,10 +24,11 @@ export default function PageHero({
         <Image
           src={illustrationSrc}
           alt={illustrationAlt}
-          width={220}
-          height={160}
+          width={500}
+          height={300}
           priority
           className={styles.illustration}
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
     </div>

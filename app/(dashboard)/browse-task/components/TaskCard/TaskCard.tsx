@@ -1,6 +1,6 @@
 import styles from "./taskcard.module.css";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+//  Types
 export interface Task {
   id: string;
   title: string;
@@ -26,7 +26,7 @@ interface Props {
   onClick?: (task: Task) => void;
 }
 
-// ─── StarRating (could also be its own file) ──────────────────────────────────
+//  StarRating (could also be its own file)
 function StarRating({ value, count }: { value: number; count: number }) {
   return (
     <div className={styles.rating}>
@@ -37,7 +37,7 @@ function StarRating({ value, count }: { value: number; count: number }) {
   );
 }
 
-// ─── TaskCard ─────────────────────────────────────────────────────────────────
+//  TaskCard
 export default function TaskCard({ task, viewMode = "list", onClick }: Props) {
   const isGrid = viewMode === "grid";
 
