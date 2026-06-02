@@ -17,7 +17,9 @@ export default function BecomeHelperCTA() {
           <span className={styles.checkIcon}>✔</span> {p}
         </div>
       ))}
-      <button className={styles.btn}>Become a Helper →</button>
+      <button type='button' className={styles.btn}>
+        Become a Helper →
+      </button>
     </div>
   );
 }

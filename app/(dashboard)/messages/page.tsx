@@ -103,6 +103,7 @@ export default function MessagesPage() {
             <div className={styles.searchBox}>
               <span className={styles.searchBox__icon}>🔍</span>
               <input
+                aria-label='Search messages'
                 className={styles.searchBox__input}
                 placeholder='Search messages...'
                 value={searchQuery}

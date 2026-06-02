@@ -10,8 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "SkillBridge PH | Pa-Help? Kaya Yan!",
-  description:
-    "Hanapin ang tamang tulong para sa'yo. Mag-connect sa mga skilled helpers sa Pilipinas.",
+  description: "Find trusted local helpers and services.",
   metadataBase: new URL("http://localhost:3000"),
   icons: {
     icon: "/illustration/logotrial.png",
@@ -28,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='fil' className={jakarta.variable}>
+    <html lang='en-PH'>
       <body>{children}</body>
     </html>
   );

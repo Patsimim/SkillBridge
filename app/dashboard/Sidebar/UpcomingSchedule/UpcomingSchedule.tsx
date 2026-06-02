@@ -1,5 +1,6 @@
 "use client";
 import styles from "./upcomingschedule.module.css";
+import { Expand } from "lucide-react";
 
 const SCHEDULE = [
   {
@@ -30,7 +31,9 @@ export default function UpcomingSchedule() {
     <div className={styles.card}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>Upcoming Schedule</h2>
-        <button className={styles.seeAll}>View all →</button>
+        <button className={styles.seeAll}>
+          <Expand />
+        </button>
       </div>
       <div className={styles.list}>
         {SCHEDULE.map((s, i) => (

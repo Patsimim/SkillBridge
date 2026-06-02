@@ -37,7 +37,6 @@ export default function RecentConversations() {
     <div className={styles.card}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>Recent Conversations</h2>
-        <button className={styles.seeAll}>View all →</button>
       </div>
       <div className={styles.list}>
         {CONVOS.map((c) => (

@@ -34,13 +34,6 @@ const ACTIONS = [
     badge: null,
   },
   {
-    icon: <MessageSquare size={17} strokeWidth={1.8} />,
-    label: "Messages",
-    sub: "3 unread messages",
-    primary: false,
-    badge: 3,
-  },
-  {
     icon: <Bookmark size={17} strokeWidth={1.8} />,
     label: "Saved Helpers",
     sub: "5 saved helpers",
