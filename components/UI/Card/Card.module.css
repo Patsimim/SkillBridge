@@ -1,0 +1,147 @@
+.card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 16px;
+  min-width: 160px;
+  flex-shrink: 0;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Tag row — ensures tag sits on its own line */
+.tagRow {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Tag pill */
+.tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.tagPopular {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.tagNearYou {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tagRecommended {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.tagTrending {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+/* Avatar */
+.avatarWrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bfdbfe, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.verified {
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  border: 2px solid white;
+}
+
+/* Text */
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.star {
+  color: #f59e0b;
+}
+
+.ratingVal {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.skill {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+/* Book button */
+.bookBtn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.bookBtn:hover {
+  background: #1d4ed8;
+}

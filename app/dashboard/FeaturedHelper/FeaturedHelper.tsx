@@ -1,7 +1,8 @@
 "use client";
-import styles from "./featuredhelper.module.css";
+import HorizontalCardSection from "@/components/UI/Section/horizontalcardsection";
+import Card, { CardProps } from "@/components/UI/Card/Card";
 
-const HELPERS = [
+const HELPERS: CardProps[] = [
   {
     initials: "AR",
     name: "Alexandra R.",
@@ -9,6 +10,8 @@ const HELPERS = [
     reviews: 128,
     skill: "Essay Writing · Research",
     price: "₱250",
+    verified: true,
+    showBookBtn: true,
   },
   {
     initials: "JM",
@@ -17,6 +20,8 @@ const HELPERS = [
     reviews: 96,
     skill: "Math Tutor · Calculus",
     price: "₱250",
+    verified: true,
+    showBookBtn: true,
   },
   {
     initials: "PL",
@@ -25,6 +30,8 @@ const HELPERS = [
     reviews: 74,
     skill: "Canva · Social Media",
     price: "₱300",
+    verified: true,
+    showBookBtn: true,
   },
   {
     initials: "MT",
@@ -33,6 +40,8 @@ const HELPERS = [
     reviews: 83,
     skill: "Excel · Data Entry",
     price: "₱200",
+    verified: true,
+    showBookBtn: true,
   },
   {
     initials: "KD",
@@ -41,35 +50,17 @@ const HELPERS = [
     reviews: 88,
     skill: "Lab Reports · Biology",
     price: "₱250",
+    verified: true,
+    showBookBtn: true,
   },
 ];
 
 export default function FeaturedHelpers() {
   return (
-    <section>
-      <div className={styles.sectionHeader}>
-        <h2 className={styles.sectionTitle}>Featured Helpers</h2>
-        <button className={styles.seeAll}>See all helpers →</button>
-      </div>
-      <div className={styles.scroll}>
-        {HELPERS.map((h) => (
-          <div key={h.name} className={styles.card}>
-            <div className={styles.avatarWrap}>
-              <div className={styles.avatar}>{h.initials}</div>
-              <div className={styles.verified}>✓</div>
-            </div>
-            <div className={styles.helperName}>{h.name}</div>
-            <div className={styles.rating}>
-              <span className={styles.star}>★</span>
-              <span className={styles.ratingVal}>{h.rating}</span>
-              <span>({h.reviews})</span>
-            </div>
-            <div className={styles.skill}>{h.skill}</div>
-            <div className={styles.price}>Starts at {h.price}</div>
-            <button className={styles.bookBtn}>Book Now</button>
-          </div>
-        ))}
-      </div>
-    </section>
+    <HorizontalCardSection title='Featured Helpers'>
+      {HELPERS.map((h) => (
+        <Card key={h.name} {...h} />
+      ))}
+    </HorizontalCardSection>
   );
 }
