@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./dashboardhero.module.css";
 import Image from "next/image";
 import { Search, Plus, FileText, MessageSquare, Bookmark } from "lucide-react";
@@ -25,6 +26,7 @@ const ACTIONS = [
     sub: "Get help from experts",
     primary: true,
     badge: null,
+    href: "/post-task",
   },
   {
     icon: <FileText size={17} strokeWidth={1.8} />,
@@ -44,6 +46,7 @@ const ACTIONS = [
 
 export default function DashboardHero() {
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   return (
     <div className={styles.hero}>
@@ -71,6 +74,7 @@ export default function DashboardHero() {
           {ACTIONS.map((a) => (
             <button
               key={a.label}
+              onClick={() => a.href && router.push(a.href)}
               className={`${styles.actionBtn} ${
                 a.primary ? styles.actionPrimary : styles.actionSecondary
               }`}
