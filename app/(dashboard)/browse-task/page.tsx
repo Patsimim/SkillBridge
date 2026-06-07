@@ -8,6 +8,12 @@ import TaskCard, {
 import FilterSidebar, {
   FilterState,
 } from "@/app/(dashboard)/browse-task/components/FilterSideBar/FilterSideBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faList,
+  faGridHorizontal,
+  faTh,
+} from "@fortawesome/free-solid-svg-icons";
 
 //  Mock Data
 const MOCK_TASKS: Task[] = [
@@ -197,14 +203,14 @@ export default function BrowseTask() {
                   onClick={() => setViewMode("list")}
                   aria-label='List view'
                 >
-                  ☰
+                  <FontAwesomeIcon icon={faList} />
                 </button>
                 <button
                   className={`${styles.viewBtn} ${viewMode === "grid" ? styles.viewBtnActive : ""}`}
                   onClick={() => setViewMode("grid")}
                   aria-label='Grid view'
                 >
-                  ⊞
+                  <FontAwesomeIcon icon={faGridHorizontal} />
                 </button>
               </div>
             </div>

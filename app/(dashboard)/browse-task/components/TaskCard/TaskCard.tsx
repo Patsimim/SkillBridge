@@ -1,6 +1,5 @@
 import styles from "./taskcard.module.css";
 
-//  Types
 export interface Task {
   id: string;
   title: string;
@@ -8,7 +7,7 @@ export interface Task {
   description: string;
   tags: string[];
   startPrice: number;
-  priceUnit?: string; // e.g. "/ hr" or undefined for flat rate
+  priceUnit?: string;
   delivery: string;
   provider: {
     name: string;
@@ -26,7 +25,6 @@ interface Props {
   onClick?: (task: Task) => void;
 }
 
-//  StarRating (could also be its own file)
 function StarRating({ value, count }: { value: number; count: number }) {
   return (
     <div className={styles.rating}>
@@ -37,7 +35,6 @@ function StarRating({ value, count }: { value: number; count: number }) {
   );
 }
 
-//  TaskCard
 export default function TaskCard({ task, viewMode = "list", onClick }: Props) {
   const isGrid = viewMode === "grid";
 
@@ -58,7 +55,9 @@ export default function TaskCard({ task, viewMode = "list", onClick }: Props) {
         <div className={styles.titleRow}>
           <h3 className={styles.title}>{task.title}</h3>
           <span
-            className={`${styles.statusBadge} ${styles[`status${task.status.replace(" ", "")}`]}`}
+            className={`${styles.statusBadge} ${
+              styles[`status${task.status.replace(" ", "")}`]
+            }`}
           >
             {task.status}
           </span>
@@ -73,40 +72,79 @@ export default function TaskCard({ task, viewMode = "list", onClick }: Props) {
         </div>
       </div>
 
-      {/* Price */}
-      <div className={styles.meta}>
-        <div className={styles.metaGroup}>
-          <span className={styles.metaLabel}>Starts at</span>
-          <span className={styles.price}>
-            ₱{task.startPrice.toLocaleString()}
-            {task.priceUnit && (
-              <span className={styles.priceUnit}>{task.priceUnit}</span>
-            )}
-          </span>
-        </div>
-        <div className={styles.metaGroup}>
-          <span className={styles.metaLabel}>Delivery</span>
-          <span className={styles.deliveryValue}>{task.delivery}</span>
-        </div>
-      </div>
+      {/* LIST MODE: price + provider in one centered row */}
+      {!isGrid && (
+        <div className={styles.rightSection}>
+          <div className={styles.meta}>
+            <div className={styles.metaGroup}>
+              <span className={styles.metaLabel}>Starts at</span>
+              <span className={styles.price}>
+                ₱{task.startPrice.toLocaleString()}
+                {task.priceUnit && (
+                  <span className={styles.priceUnit}>{task.priceUnit}</span>
+                )}
+              </span>
+            </div>
+            <div className={styles.metaGroup}>
+              <span className={styles.metaLabel}>Delivery</span>
+              <span className={styles.deliveryValue}>{task.delivery}</span>
+            </div>
+          </div>
 
-      {/* Provider */}
-      <div className={styles.provider}>
-        <img
-          src={task.provider.avatar}
-          alt={task.provider.name}
-          className={styles.avatar}
-        />
-        <div className={styles.providerInfo}>
-          <span className={styles.providerName}>{task.provider.name}</span>
-          <StarRating
-            value={task.provider.rating}
-            count={task.provider.reviews}
-          />
+          <div className={styles.provider}>
+            <img
+              src={task.provider.avatar}
+              alt={task.provider.name}
+              className={styles.avatar}
+            />
+            <div className={styles.providerInfo}>
+              <span className={styles.providerName}>{task.provider.name}</span>
+              <StarRating
+                value={task.provider.rating}
+                count={task.provider.reviews}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Chevron */}
+      {/* GRID MODE: price + delivery in a row, then provider below */}
+      {isGrid && (
+        <>
+          <div className={styles.gridMeta}>
+            <div className={styles.metaGroup}>
+              <span className={styles.metaLabel}>Starts at</span>
+              <span className={styles.price}>
+                ₱{task.startPrice.toLocaleString()}
+                {task.priceUnit && (
+                  <span className={styles.priceUnit}>{task.priceUnit}</span>
+                )}
+              </span>
+            </div>
+            <div className={styles.metaGroup}>
+              <span className={styles.metaLabel}>Delivery</span>
+              <span className={styles.deliveryValue}>{task.delivery}</span>
+            </div>
+          </div>
+
+          <div className={styles.gridProvider}>
+            <img
+              src={task.provider.avatar}
+              alt={task.provider.name}
+              className={styles.avatar}
+            />
+            <div className={styles.providerInfo}>
+              <span className={styles.providerName}>{task.provider.name}</span>
+              <StarRating
+                value={task.provider.rating}
+                count={task.provider.reviews}
+              />
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Chevron (list only) */}
       {!isGrid && <span className={styles.chevron}>›</span>}
     </div>
   );
