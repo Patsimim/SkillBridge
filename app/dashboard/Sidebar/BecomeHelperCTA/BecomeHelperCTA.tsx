@@ -1,4 +1,6 @@
 "use client";
+
+import { useRouter } from "next/navigation";
 import styles from "./becomehelperCTA.module.css";
 
 const PERKS = [
@@ -8,6 +10,8 @@ const PERKS = [
 ];
 
 export default function BecomeHelperCTA() {
+  const router = useRouter();
+
   return (
     <div className={styles.card}>
       <div className={styles.title}>Want to earn and help others?</div>
@@ -17,7 +21,11 @@ export default function BecomeHelperCTA() {
           <span className={styles.checkIcon}>✔</span> {p}
         </div>
       ))}
-      <button type='button' className={styles.btn}>
+      <button
+        type='button'
+        className={styles.btn}
+        onClick={() => router.push("/become-helper")}
+      >
         Become a Helper →
       </button>
     </div>
