@@ -14,6 +14,7 @@ import {
   faGridHorizontal,
   faTh,
 } from "@fortawesome/free-solid-svg-icons";
+import { Search } from "lucide-react";
 
 //  Mock Data
 const MOCK_TASKS: Task[] = [
@@ -154,7 +155,7 @@ export default function BrowseTask() {
         {/* ── Search Row ── */}
         <div className={styles.searchRow}>
           <div className={styles.searchInputWrapper}>
-            <span className={styles.searchIcon}>🔍</span>
+            <Search size={15} className={styles.searchIcon} />
             <input
               type='text'
               className={styles.searchInput}

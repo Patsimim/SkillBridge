@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import styles from "./dashboardhero.module.css";
 import Image from "next/image";
 import { Search, Plus, FileText, MessageSquare, Bookmark } from "lucide-react";
+import { FlipText } from "@/components/UI/flip-text";
 
 function HeroIllustration() {
   return (
@@ -52,7 +53,13 @@ export default function DashboardHero() {
     <div className={styles.hero}>
       <div className={styles.left}>
         <h1 className={styles.greeting}>
-          Magandang araw, <span className={styles.name}>Russel</span> 👋
+          Magandang araw,{" "}
+          <span className={styles.name}>
+            <FlipText duration={5} delay={0} loop={false} together>
+              Russel
+            </FlipText>
+          </span>{" "}
+          👋
         </h1>
         <p className={styles.sub}>What do you need help with today?</p>
 

@@ -1,0 +1,47 @@
+.wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.initials {
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b57f7 0%, #5b7fff 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.cameraBtn {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.cameraBtn:hover {
+  background: #f0f4ff;
+  color: #3b57f7;
+  border-color: #3b57f7;
+}

@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef } from "react";
 import { CheckCircle, MessageSquare, CalendarClock, Inbox } from "lucide-react";
 import Link from "next/link";
 import styles from "./notification.module.css";
@@ -62,29 +61,10 @@ interface Props {
 }
 
 export default function NotificationDropdown({ onClose }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        onClose();
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
-
   const unreadCount = MOCK_NOTIFICATIONS.filter((n) => !n.read).length;
 
   return (
-    <div
-      className={styles.dropdown}
-      ref={ref}
-      role='dialog'
-      aria-label='Notifications'
-    >
+    <div className={styles.dropdown} role='dialog' aria-label='Notifications'>
       {/* Header */}
       <div className={styles.header}>
         <div className={styles.headerLeft}>

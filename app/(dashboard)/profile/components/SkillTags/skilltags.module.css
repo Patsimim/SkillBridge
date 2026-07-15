@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3b57f7;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border: 1px solid #c7d2fe;
+  white-space: nowrap;
+}

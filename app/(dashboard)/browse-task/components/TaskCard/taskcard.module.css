@@ -26,7 +26,7 @@
 /* Grid mode */
 .cardGrid {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 12px;
   border: 1px solid #e5e7eb !important;
   border-radius: 12px;
@@ -119,7 +119,7 @@
   font-weight: 500;
 }
 
-/* ─── Right section ─── */
+/* Right section */
 .rightSection {
   display: flex;
   align-items: center;

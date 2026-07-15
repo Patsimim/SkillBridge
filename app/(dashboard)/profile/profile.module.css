@@ -1,0 +1,713 @@
+.page {
+  padding: 32px 32px;
+  max-width: 100%;
+  background: #f9fafb;
+  min-height: 100%;
+}
+
+/* Page header */
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.pageSubtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 24px;
+}
+
+/* Hero card */
+.heroCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.heroInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.heroName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.heroNameText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.roleBadge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #3b57f7;
+  border: 1px solid #c7d2fe;
+}
+
+.verifiedBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.heroMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heroMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.heroMetaRow svg {
+  flex-shrink: 0;
+  color: #9ca3af;
+}
+
+.editProfileBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: flex-start;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.editProfileBtn:hover {
+  background: #f0f4ff;
+  border-color: #3b57f7;
+  color: #3b57f7;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* About Me */
+.bio {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Stats row */
+.statsRow {
+  display: flex;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 4px;
+  margin-top: 4px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 16px 8px;
+  flex: 1;
+}
+
+.statsDivider {
+  width: 1px;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.statIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.statIconWrap.blue {
+  background: #eef2ff;
+  color: #3b57f7;
+}
+.statIconWrap.orange {
+  background: #fff7ed;
+  color: #f97316;
+}
+.statIconWrap.green {
+  background: #f0fdf4;
+  color: #22c55e;
+}
+.statIconWrap.purple {
+  background: #faf5ff;
+  color: #a855f7;
+}
+
+.statValue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.statStar {
+  color: #f59e0b;
+}
+
+.statLabel {
+  font-size: 0.78rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.statLink {
+  font-size: 0.78rem;
+  color: #3b57f7;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 1px;
+}
+
+.statLink:hover {
+  text-decoration: underline;
+}
+
+/* Experience timeline */
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.experienceItem {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.experienceItem:last-child {
+  padding-bottom: 0;
+}
+
+.expDotCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  padding-top: 4px;
+}
+
+.expDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3b57f7;
+  flex-shrink: 0;
+}
+
+.expDot.past {
+  background: #d1d5db;
+}
+
+.expLine {
+  width: 2px;
+  flex: 1;
+  background: #e5e7eb;
+  margin-top: 4px;
+  min-height: 20px;
+}
+
+.expContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.expTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px;
+}
+
+.expPeriod {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0 0 6px;
+}
+
+.expDesc {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Portfolio grid */
+.portfolioHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.portfolioTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.viewAllLink {
+  font-size: 0.8125rem;
+  color: #3b57f7;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.portfolioItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.portfolioThumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  overflow: hidden;
+}
+
+.portfolioThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolioItemTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.portfolioItemType {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Reviews */
+.reviewsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.reviewsTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.reviewCount {
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviewItem {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.reviewItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reviewContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.reviewerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.reviewerName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.reviewDate {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.reviewStars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.starFilled {
+  color: #f59e0b;
+}
+.starEmpty {
+  color: #e5e7eb;
+}
+
+.reviewComment {
+  font-size: 0.85rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Quick Actions (bottom) ── */
+.quickActionsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.quickActionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #fff;
+  text-align: center;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.quickActionCard:hover {
+  border-color: #3b57f7;
+  background: #f8f9ff;
+}
+
+.quickActionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.quickActionCard:hover .quickActionIcon {
+  background: #eef2ff;
+  color: #3b57f7;
+}
+
+.quickActionTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111827;
+}
+.quickActionDesc {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* ══ RIGHT COLUMN ══ */
+
+/* Availability */
+.availStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.availDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.availDot.available {
+  background: #22c55e;
+}
+.availDot.busy {
+  background: #f97316;
+}
+.availDot.away {
+  background: #9ca3af;
+}
+
+.availStatusText.available {
+  color: #16a34a;
+}
+.availStatusText.busy {
+  color: #ea580c;
+}
+.availStatusText.away {
+  color: #6b7280;
+}
+
+.availMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.availRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.availRow svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #9ca3af;
+}
+
+.availRowText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.availRowLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+.availRowValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Verification */
+.verificationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.verificationRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.verificationRow svg {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+/* Rates */
+.hourlyRate {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.hourlyRate span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.languageList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.languageRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.languageName {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.languageStars {
+  display: flex;
+  gap: 2px;
+}
+
+.ratesDivider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 14px 0;
+}
+
+.ratesSectionLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+/* Education */
+.educationInstitution {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px;
+}
+
+.educationDegree {
+  font-size: 0.85rem;
+  color: #374151;
+  margin: 0 0 2px;
+}
+
+.educationPeriod {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Certificates */
+.certificateList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.certificateItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.certIconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b57f7;
+  flex-shrink: 0;
+}
+
+.certText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.certTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+}
+.certIssued {
+  font-size: 0.78rem;
+  color: #6b7280;
+}

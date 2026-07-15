@@ -82,7 +82,7 @@ export default function Step3HelperProfile({
 
       {/* Right */}
       <div className={styles.stepRight}>
-        {/* ── Skills / Categories ── */}
+        {/* Skills / Categories  */}
         <div className={styles.fieldGroup}>
           <label className={styles.fieldLabel}>
             Skills / Categories{" "}
@@ -127,7 +127,7 @@ export default function Step3HelperProfile({
           </div>
         </div>
 
-        {/* ── Short Bio ── */}
+        {/*  Short Bio  */}
         <div className={styles.fieldGroup}>
           <label className={styles.fieldLabel} htmlFor='helperBio'>
             Short Bio
@@ -147,7 +147,7 @@ export default function Step3HelperProfile({
           </div>
         </div>
 
-        {/* ── Languages Spoken ── */}
+        {/*  Languages Spoken  */}
         <div className={styles.fieldGroup}>
           <label className={styles.fieldLabel}>Languages Spoken</label>
           <div className={styles.tagInputWrapper}>

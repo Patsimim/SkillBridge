@@ -55,13 +55,11 @@ export default function ConversationDetails({
           )}
           {user.memberSince && (
             <span className={styles.helperCard__meta}>
-              <span className={styles.helperCard__metaIcon}>🕐</span>
               Member since {user.memberSince}
             </span>
           )}
           {user.responseTime && (
             <span className={styles.helperCard__meta}>
-              <span className={styles.helperCard__metaIcon}>🕐</span>
               Typically replies within {user.responseTime}
             </span>
           )}
@@ -109,7 +107,7 @@ export default function ConversationDetails({
             </button>
           </div>
         ))}
-        <button className={styles.uploadBtn}>↑ Upload File</button>
+        <button className={styles.uploadBtn}>Upload File</button>
       </div>
     </aside>
   );

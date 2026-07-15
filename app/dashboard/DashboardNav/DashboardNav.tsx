@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -20,10 +20,31 @@ export default function DashboardNav() {
   const [notifOpen, setNotifOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
+  const notifRef = useRef<HTMLDivElement>(null);
+  const profileRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setNotifOpen(false);
     setProfileOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
+        setNotifOpen(false);
+      }
+      if (
+        profileRef.current &&
+        !profileRef.current.contains(e.target as Node)
+      ) {
+        setProfileOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className={styles.navbar}>
@@ -65,7 +86,7 @@ export default function DashboardNav() {
 
         {/* Right */}
         <div className={styles.navbar__user}>
-          <div className={styles.notifWrapper}>
+          <div className={styles.notifWrapper} ref={notifRef}>
             <button
               className={styles.notifBtn}
               onClick={() => setNotifOpen((prev) => !prev)}
@@ -79,7 +100,7 @@ export default function DashboardNav() {
             )}
           </div>
 
-          <div className={styles.profileWrapper}>
+          <div className={styles.profileWrapper} ref={profileRef}>
             <button
               className={styles.userBtn}
               onClick={() => setProfileOpen((prev) => !prev)}

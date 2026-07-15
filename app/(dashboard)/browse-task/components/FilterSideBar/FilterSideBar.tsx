@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./filtersidebar.module.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 //  Types
 export interface FilterState {
   categories: string[];
@@ -134,7 +135,9 @@ function FilterSection({
         onClick={() => setOpen((o) => !o)}
       >
         <span className={styles.sectionTitle}>{title}</span>
-        <span className={styles.sectionChevron}>{open ? "∧" : "∨"}</span>
+        <span className={styles.sectionChevron}>
+          {open ? <FaAngleUp /> : <FaAngleDown />}
+        </span>
       </button>
       {open && <div className={styles.sectionBody}>{children}</div>}
     </div>

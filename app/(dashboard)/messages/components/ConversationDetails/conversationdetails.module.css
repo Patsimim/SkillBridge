@@ -101,12 +101,6 @@
   gap: 5px;
 }
 
-.helperCard__metaIcon {
-  font-size: 13px;
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
 .helperCard__profileBtn {
   margin-top: 8px;
   width: 100%;

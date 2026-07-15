@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./post-task.module.css";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// Types
 
 interface TaskFormData {
   title: string;
@@ -16,7 +16,7 @@ interface TaskFormData {
   attachments: File[];
 }
 
-// ─── Sub-components (can be extracted to separate files) ──────────────────────
+// Sub-components (can be extracted to separate files)
 
 /** Reusable icon wrapper used in the step icons on the left column */
 const StepIcon: React.FC<{
@@ -203,7 +203,7 @@ const PreviewRow: React.FC<{
   </div>
 );
 
-// ─── Constants ─────────────────────────────────────────────────────────────────
+// Constants
 
 const CATEGORIES = [
   "Education & Tutoring",
@@ -228,7 +228,7 @@ const BUDGET_RANGES = [
   "₱5,000+",
 ];
 
-// ─── Main Page ─────────────────────────────────────────────────────────────────
+// Main Page
 
 const PostTaskPage: React.FC = () => {
   const [form, setForm] = useState<TaskFormData>({
@@ -269,7 +269,7 @@ const PostTaskPage: React.FC = () => {
 
   return (
     <div className={styles.pageWrapper}>
-      {/* ── Top Nav ── */}
+      {/* Top Nav */}
       <nav className={styles.navbar}>
         <div className={styles.navBrand}>
           <span className={styles.navLogo}>S</span>
@@ -320,7 +320,7 @@ const PostTaskPage: React.FC = () => {
         </div>
       </nav>
 
-      {/* ── Page Content ── */}
+      {/* Page Content */}
       <main className={styles.main}>
         {/* Back link */}
         <a href='#' className={styles.backLink}>
@@ -344,7 +344,7 @@ const PostTaskPage: React.FC = () => {
         </p>
 
         <div className={styles.layout}>
-          {/* ── Left: Form ── */}
+          {/* Left: Form */}
           <div className={styles.formCard}>
             {/* Task Title */}
             <div className={styles.fieldGroup}>
@@ -718,7 +718,7 @@ const PostTaskPage: React.FC = () => {
             </div>
           </div>
 
-          {/* ── Right: Preview ── */}
+          {/* Right: Preview */}
           <TaskPreview data={form} />
         </div>
       </main>
