@@ -1,5 +1,5 @@
 .page {
-  background: #f1f5f9;
+  background: var(--page-bg);
   min-height: auto;
   font-family: "Plus Jakarta Sans", "Outfit", sans-serif;
 }
@@ -43,13 +43,13 @@
 .sectionTitle {
   font-size: 17px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--text-dark);
 }
 
 .seeAll {
   font-size: 13px;
   font-weight: 600;
-  color: #2563eb;
+  color: var(--tag-tech-color);
   background: none;
   border: none;
   cursor: pointer;
@@ -80,7 +80,7 @@
 
 .serviceCard {
   background: white;
-  border: 1px solid #e8edf3;
+  border: 1px solid var(--color-border-light);
   border-radius: 14px;
   padding: 14px 16px;
   min-width: 190px;
@@ -92,7 +92,7 @@
 }
 
 .serviceCard:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
   transform: translateY(-2px);
 }
 
@@ -108,20 +108,21 @@
 }
 
 .tagPopular {
-  background: #fef3c7;
-  color: #d97706;
+  background: var(--tag-popular-bg);
+  color: var(--tag-popular-color);
 }
+
 .tagNearYou {
-  background: #dcfce7;
-  color: #16a34a;
+  background: var(--tag-near-bg);
+  color: var(--tag-near-color);
 }
 .tagRecommended {
-  background: #dbeafe;
-  color: #2563eb;
+  background: var(--tag-tech-bg);
+  color: var(--tag-tech-color);
 }
 .tagTrending {
-  background: #fce7f3;
-  color: #db2777;
+  background: var(--tag-trending-bg);
+  color: var(--tag-trending-color);
 }
 
 .cardAvatar {
@@ -129,7 +130,7 @@
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  background: #e2e8f0;
+  background: var(--color-border-light);
   margin-bottom: 8px;
 }
 
@@ -144,7 +145,7 @@
 .cardName {
   font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-dark);
   margin-bottom: 4px;
 }
 
@@ -153,7 +154,7 @@
   align-items: center;
   gap: 4px;
   font-size: 12px;
-  color: #64748b;
+  color: var(--color-text-muted);
   margin-bottom: 4px;
 }
 

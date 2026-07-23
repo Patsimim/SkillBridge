@@ -49,6 +49,20 @@
   --radius-xl: 20px;
   --radius-full: 9999px;
 
+  /* Dashboard / UI specific tokens (added to centralize repeated values) */
+  --page-bg: #f1f5f9;
+  --text-dark: #0f172a;
+  --color-border-light: #e8edf3;
+  --tag-popular-bg: #fef3c7;
+  --tag-popular-color: #d97706;
+  --tag-near-bg: #dcfce7;
+  --tag-near-color: #16a34a;
+  --tag-tech-bg: #dbeafe;
+  --tag-tech-color: #2563eb;
+  --tag-trending-bg: #fce7f3;
+  --tag-trending-color: #db2777;
+  --shadow-card: 0 6px 18px rgba(0, 0, 0, 0.08);
+
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 12px rgba(29, 111, 216, 0.1);

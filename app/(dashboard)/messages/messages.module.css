@@ -1,11 +1,11 @@
 :root {
-  --brand-blue: #2563eb;
-  --brand-blue-light: #eff6ff;
-  --brand-blue-mid: #dbeafe;
+  --brand-blue: var(--tag-tech-color);
+  --brand-blue-light: var(--tag-tech-bg);
+  --brand-blue-mid: var(--tag-tech-bg);
   --text-primary: #111827;
   --text-secondary: #6b7280;
   --text-muted: #9ca3af;
-  --bg-page: #f0f4f8;
+  --bg-page: var(--page-bg);
   --bg-card: #ffffff;
   --bg-hover: #f9fafb;
   --border: #e5e7eb;

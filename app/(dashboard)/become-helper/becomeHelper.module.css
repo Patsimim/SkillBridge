@@ -88,7 +88,7 @@
 }
 
 .connectorFilled {
-  background: #2563eb;
+  background: var(--tag-tech-color);
 }
 
 .stepCircle {
@@ -109,15 +109,15 @@
 }
 
 .stepCircleActive {
-  background: #2563eb;
-  color: #ffffff;
-  border: 2px solid #2563eb;
+  background: var(--tag-tech-color);
+  color: var(--color-white);
+  border: 2px solid var(--tag-tech-color);
 }
 
 .stepCircleCompleted {
-  background: #2563eb;
-  color: #ffffff;
-  border: 2px solid #2563eb;
+  background: var(--tag-tech-color);
+  color: var(--color-white);
+  border: 2px solid var(--tag-tech-color);
 }
 
 .stepCircleUpcoming {
@@ -134,12 +134,12 @@
 }
 
 .stepLabelActive {
-  color: #2563eb;
+  color: var(--tag-tech-color);
   font-weight: 600;
 }
 
 .stepLabelCompleted {
-  color: #2563eb;
+  color: var(--tag-tech-color);
   font-weight: 500;
 }
 

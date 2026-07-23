@@ -1,7 +1,7 @@
 /* One unified white bar */
 .statsRow {
   background: white;
-  border: 1px solid #e8edf3;
+  border: 1px solid var(--color-border-light);
   border-radius: 14px;
   padding: 0 18px;
   display: flex;
@@ -28,7 +28,7 @@
 .divider {
   width: 1px;
   height: 48px;
-  background: #e8edf3;
+  background: var(--color-border-light);
   flex-shrink: 0;
 }
 
@@ -52,19 +52,19 @@
 }
 
 .iconBlue {
-  background: #dbeafe;
+  background: var(--tag-tech-bg);
 }
 .iconOrange {
   background: #ffedd5;
 }
 .iconGreen {
-  background: #dcfce7;
+  background: var(--tag-near-bg);
 }
 
 .statNum {
   font-size: 22px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--text-dark);
   line-height: 1.1;
 }
 
@@ -77,13 +77,13 @@
 
 .statSub {
   font-size: 11px;
-  color: #94a3b8;
+  color: var(--color-text-light);
   margin-top: 1px;
 }
 
 /* Single arrow at the far right */
 .statArrow {
-  color: #94a3b8;
+  color: var(--color-text-light);
   font-size: 20px;
   flex-shrink: 0;
   padding-left: 8px;
@@ -103,7 +103,7 @@
   .divider {
     width: 100%;
     height: 1px;
-    background: #e8edf3;
+    background: var(--color-border-light);
   }
   .statCard {
     padding: 14px 0;
